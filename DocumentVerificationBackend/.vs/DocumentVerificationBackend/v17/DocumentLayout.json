@@ -78,8 +78,7 @@
               "RelativeToolTip": "Controllers\\DocumentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:49:00.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:49:00.953Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "Controllers\\VerificationController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:49:59.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:49:59.012Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "Services\\DocumentService.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowBQAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:38:55.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:38:55.085Z"
             },
             {
               "$type": "Document",
@@ -115,7 +112,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:36:14.162Z",
               "EditorCaption": ""

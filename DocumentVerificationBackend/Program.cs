@@ -16,6 +16,13 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader());
 });
 
+// Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddControllers();
+builder.Services.AddScoped<DocumentService>();
+
 var app = builder.Build();
 app.UseCors("AllowAngularApp");
 
@@ -25,17 +32,6 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
-
-// Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddControllers();
-builder.Services.AddScoped<DocumentService>();
-
-
-// Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
