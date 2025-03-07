@@ -165,4 +165,3 @@ C:\Users\ahuevo nice\Desktop\DocVerficationSystem\DocumentVerificationBackend\ob
 C:\Users\ahuevo nice\Desktop\DocVerficationSystem\DocumentVerificationBackend\obj\Debug\net9.0\DocumentVerificationBackend.pdb
 C:\Users\ahuevo nice\Desktop\DocVerficationSystem\DocumentVerificationBackend\obj\Debug\net9.0\DocumentVerificationBackend.genruntimeconfig.cache
 C:\Users\ahuevo nice\Desktop\DocVerficationSystem\DocumentVerificationBackend\obj\Debug\net9.0\ref\DocumentVerificationBackend.dll
-C:\Users\ahuevo nice\Desktop\DocVerficationSystem\DocumentVerificationBackend\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
