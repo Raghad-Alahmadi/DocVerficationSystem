@@ -79,6 +79,26 @@ public class DocumentController : ControllerBase
     {
         return await _context.Documents.ToListAsync();
     }
+    [HttpPost("verify")]
+    public async Task<IActionResult> VerifyDocument([FromBody] VerificationRequest request)
+    {
+        var document = await _context.Documents.FirstOrDefaultAsync(d => d.Id == request.DocumentId);
+        if (document == null)
+        {
+            return NotFound(new { Message = "Document not found" });
+        }
+
+        document.Status = "Verified";
+        _context.Documents.Update(document);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { Message = "Document verified successfully", Title = document.Title });
+    }
+
+    public class VerificationRequest
+    {
+        public int DocumentId { get; set; }
+}
 }
 public class DocumentUploadDto
 {

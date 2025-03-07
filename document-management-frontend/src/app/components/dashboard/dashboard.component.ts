@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class DashboardComponent implements OnInit {
   documents: any[] = [];
+  verificationMessage: string = ''; 
+  verificationError: string = ''; 
 
   constructor(private documentService: DocumentService) {}
 
@@ -25,15 +27,17 @@ export class DashboardComponent implements OnInit {
   }
 
   verify(documentId: number): void {
-    this.documentService.verifyDocument(documentId.toString()).subscribe(response => {
-      console.log(`Document verified successfully: ${response.title}`);
+    this.documentService.verifyDocument(documentId).subscribe(response => {
+      this.verificationMessage = `Document verified successfully: ${response.title}`;
+      this.verificationError = '';
       // Update the document status in the documents array
       const document = this.documents.find(doc => doc.id === documentId);
       if (document) {
         document.status = 'Verified';
       }
     }, error => {
-      console.log('Verification failed');
+      this.verificationError = 'Verification failed';
+      this.verificationMessage = '';
     });
   }
 }

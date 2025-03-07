@@ -18,7 +18,7 @@ export class DocumentService {
     return this.http.post<any>(`${this.apiUrl}`, formData);
   }
 
-  verifyDocument(verificationCode: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/verify`, { verificationCode });
+  verifyDocument(documentId: number): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/verify`, { documentId });
   }
 }

@@ -1,16 +1,33 @@
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let doc of documents">
-      <td>{{ doc.title }}</td>
-      <td>{{ doc.status }}</td>
-      <td><button (click)="verify(doc.id)">Verify</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="dashboard">
+  <h2>Documents</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th> 
+        <th>Title</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let document of documents">
+        <td>{{ document.id }}</td>
+        <td>{{ document.title }}</td>
+        <td>{{ document.status }}</td>
+        <td>
+          <button *ngIf="document.status !== 'Verified'" (click)="verify(document.id)" class="btn btn-primary">Verify</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Display the verification message -->
+  <div *ngIf="verificationMessage" class="message success">
+    {{ verificationMessage }}
+  </div>
+
+  <!-- Display the verification error -->
+  <div *ngIf="verificationError" class="message error">
+    {{ verificationError }}
+  </div>
+</div>
