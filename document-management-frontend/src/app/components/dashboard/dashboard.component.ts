@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DocumentService } from '../../services/document.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,10 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class DashboardComponent implements OnInit {
   documents: any[] = [];
-  verificationMessage: string = ''; 
-  verificationError: string = ''; 
+  verificationMessage: string = '';
+  verificationError: string = '';
 
-  constructor(private documentService: DocumentService) {}
+  constructor(private documentService: DocumentService, private router: Router) {}
 
   ngOnInit(): void {
     this.documentService.getDocuments().subscribe(data => {
@@ -26,18 +27,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  verify(documentId: number): void {
-    this.documentService.verifyDocument(documentId).subscribe(response => {
-      this.verificationMessage = `Document verified successfully: ${response.title}`;
-      this.verificationError = '';
-      // Update the document status in the documents array
-      const document = this.documents.find(doc => doc.id === documentId);
-      if (document) {
-        document.status = 'Verified';
-      }
-    }, error => {
-      this.verificationError = 'Verification failed';
-      this.verificationMessage = '';
-    });
+  navigateToVerification(verificationCode: string): void {
+    this.router.navigate(['/verify'], { queryParams: { code: verificationCode } });
   }
 }

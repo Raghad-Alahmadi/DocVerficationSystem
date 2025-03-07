@@ -19,12 +19,12 @@ export class DocumentUploadComponent {
   @ViewChild('fileInput') fileInput: ElementRef | undefined;
   uploadForm: FormGroup;
   selectedFile: File | null = null;
-  successMessage: string = ''; // Add a success message property
-  errorMessage: string = ''; // Add an error message property
-
+  successMessage: string = '';
+  errorMessage: string = '';
+  verificationCode: string = ''; 
   constructor(private fb: FormBuilder, private documentService: DocumentService) {
     this.uploadForm = this.fb.group({
-      userId: [1, Validators.required], // Assuming userId is 1 for testing
+      userId: [1, Validators.required],
       title: ['', Validators.required],
       file: ['', Validators.required]
     });
@@ -38,11 +38,6 @@ export class DocumentUploadComponent {
     }
   }
 
-  isFieldInvalid(field: string): boolean {
-    const control = this.uploadForm.get(field);
-    return control ? control.invalid && (control.dirty || control.touched) : false;
-  }
-
   upload(): void {
     if (this.uploadForm.valid && this.selectedFile) {
       const formData = new FormData();
@@ -51,19 +46,25 @@ export class DocumentUploadComponent {
       formData.append('file', this.selectedFile);
 
       this.documentService.uploadDocument(formData).subscribe((response: any) => {
-        this.successMessage = 'Document uploaded successfully'; // Update the success message on success
-        this.errorMessage = ''; // Clear any previous error message
-        this.uploadForm.reset(); // Reset the form
-        this.selectedFile = null; // Clear the selected file
+        this.successMessage = 'Document uploaded successfully';
+        this.errorMessage = '';
+        this.verificationCode = response.verificationCode; // Store the verification code
+        this.uploadForm.reset();
+        this.selectedFile = null;
         if (this.fileInput) {
-          this.fileInput.nativeElement.value = ''; // Clear the file input
+          this.fileInput.nativeElement.value = '';
         }
       }, error => {
-        this.errorMessage = 'Error uploading document'; // Update the error message on error
-        this.successMessage = ''; // Clear any previous success message
+        this.errorMessage = 'Error uploading document';
+        this.successMessage = '';
       });
     } else {
-      this.uploadForm.markAllAsTouched(); // Mark all fields as touched to trigger validation messages
+      this.uploadForm.markAllAsTouched();
     }
+  }
+
+  isFieldInvalid(field: string): boolean {
+    const control = this.uploadForm.get(field);
+    return control ? control.invalid && (control.dirty || control.touched) : false;
   }
 }

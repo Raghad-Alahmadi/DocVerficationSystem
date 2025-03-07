@@ -1,9 +1,9 @@
 <form [formGroup]="verifyForm" class="verify-form">
   <div class="form-group">
-    <label for="documentId">Document ID:</label>
-    <input id="documentId" formControlName="documentId" class="form-control" />
-    <div *ngIf="isFieldInvalid('documentId')" class="error-message">
-      Document ID is required.
+    <label for="verificationCode">Verification Code:</label>
+    <input id="verificationCode" formControlName="verificationCode" class="form-control" />
+    <div *ngIf="isFieldInvalid('verificationCode')" class="error-message">
+      Verification Code is required.
     </div>
   </div>
   <button type="button" (click)="verify()" class="btn btn-primary">Verify</button>

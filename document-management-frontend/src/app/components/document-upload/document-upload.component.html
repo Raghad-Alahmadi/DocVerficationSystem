@@ -25,3 +25,8 @@
 <div *ngIf="errorMessage" class="message error">
   {{ errorMessage }}
 </div>
+
+<!-- Display the verification code -->
+<div *ngIf="verificationCode" class="message info">
+  Your verification code is: {{ verificationCode }}
+</div>

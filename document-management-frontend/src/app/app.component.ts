@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DocumentUploadComponent } from './components/document-upload/document-upload.component';
-import { VerificationComponent } from './components/verification/verification.component';
 
 @Component({
   selector: 'app-root',
@@ -13,17 +10,8 @@ import { VerificationComponent } from './components/verification/verification.co
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    DashboardComponent,
-    DocumentUploadComponent,
-    VerificationComponent
+    RouterModule,
+    HttpClientModule 
   ]
 })
-export class AppComponent {
-  currentComponent: string = 'dashboard';
-
-  showComponent(component: string) {
-    this.currentComponent = component;
-  }
-}
+export class AppComponent { }

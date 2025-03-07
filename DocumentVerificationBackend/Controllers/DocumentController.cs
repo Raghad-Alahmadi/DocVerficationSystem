@@ -9,12 +9,10 @@ using Microsoft.Extensions.Logging;
 public class DocumentController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
-    private readonly ILogger<DocumentController> _logger;
 
-    public DocumentController(ApplicationDbContext context, ILogger<DocumentController> logger)
+    public DocumentController(ApplicationDbContext context)
     {
         _context = context;
-        _logger = logger;
     }
 
     [HttpPost]
@@ -33,17 +31,9 @@ public class DocumentController : ControllerBase
 
         var filePath = Path.Combine(uploadsFolderPath, documentUploadDto.File.FileName);
 
-        try
+        using (var stream = new FileStream(filePath, FileMode.Create))
         {
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await documentUploadDto.File.CopyToAsync(stream);
-            }
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error uploading file");
-            return StatusCode(500, $"Internal server error: {ex.Message}");
+            await documentUploadDto.File.CopyToAsync(stream);
         }
 
         var document = new Document
@@ -59,7 +49,7 @@ public class DocumentController : ControllerBase
         _context.Documents.Add(document);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetDocument), new { id = document.Id }, document);
+        return CreatedAtAction(nameof(GetDocument), new { id = document.Id, verificationCode = document.VerificationCode }, document);
     }
 
     [HttpGet("{id}")]
@@ -79,10 +69,11 @@ public class DocumentController : ControllerBase
     {
         return await _context.Documents.ToListAsync();
     }
+
     [HttpPost("verify")]
     public async Task<IActionResult> VerifyDocument([FromBody] VerificationRequest request)
     {
-        var document = await _context.Documents.FirstOrDefaultAsync(d => d.Id == request.DocumentId);
+        var document = await _context.Documents.FirstOrDefaultAsync(d => d.VerificationCode == request.VerificationCode);
         if (document == null)
         {
             return NotFound(new { Message = "Document not found" });
@@ -90,19 +81,31 @@ public class DocumentController : ControllerBase
 
         document.Status = "Verified";
         _context.Documents.Update(document);
+
+        var verificationLog = new VerificationLog
+        {
+            DocumentId = document.Id,
+            VerifiedBy = request.VerifiedBy,
+            Timestamp = DateTime.Now,
+            Status = "Verified"
+        };
+        _context.VerificationLogs.Add(verificationLog);
+
         await _context.SaveChangesAsync();
 
         return Ok(new { Message = "Document verified successfully", Title = document.Title });
     }
+}
 
-    public class VerificationRequest
-    {
-        public int DocumentId { get; set; }
-}
-}
 public class DocumentUploadDto
 {
     public int UserId { get; set; }
     public string Title { get; set; }
     public IFormFile File { get; set; }
+}
+
+public class VerificationRequest
+{
+    public string VerificationCode { get; set; }
+    public string VerifiedBy { get; set; }
 }

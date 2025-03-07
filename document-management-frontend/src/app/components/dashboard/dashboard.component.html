@@ -3,7 +3,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th> 
+        <th>ID</th>
         <th>Title</th>
         <th>Status</th>
         <th>Actions</th>
@@ -15,7 +15,7 @@
         <td>{{ document.title }}</td>
         <td>{{ document.status }}</td>
         <td>
-          <button *ngIf="document.status !== 'Verified'" (click)="verify(document.id)" class="btn btn-primary">Verify</button>
+          <button *ngIf="document.status !== 'Verified'" (click)="navigateToVerification(document.verificationCode)" class="btn btn-primary">Verify</button>
         </td>
       </tr>
     </tbody>
