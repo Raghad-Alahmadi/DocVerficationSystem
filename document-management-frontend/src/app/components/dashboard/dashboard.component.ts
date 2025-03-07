@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [CommonModule], // Add this line
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-  documents: any[] = [];
+export class DashboardComponent {
+  documents = [
+    { id: 1, name: 'Doc 1', title: 'Project Plan', status: 'Approved' },
+    { id: 2, name: 'Doc 2', title: 'Financial Report', status: 'Pending' }
+  ];
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get('/api/documents').subscribe((data: any) => {
-      this.documents = data;
-    });
+  verify(id: number) {
+    console.log('Verifying document', id);
   }
 }
+

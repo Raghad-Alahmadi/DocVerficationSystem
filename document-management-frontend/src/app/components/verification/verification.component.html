@@ -1,14 +1,7 @@
-<form [formGroup]="verifyForm" (ngSubmit)="onSubmit()">
-    <label for="verificationCode">Verification Code</label>
-    <input id="verificationCode" formControlName="verificationCode" type="text" />
-    <div *ngIf="verifyForm.get('verificationCode')?.invalid && verifyForm.get('verificationCode')?.touched">
-      Verification code is required
-    </div>
-  
-    <button type="submit" [disabled]="verifyForm.invalid">Verify</button>
-  </form>
-  
-  <div *ngIf="verificationResult">
-    <h3>Verification Result</h3>
-    <p>{{ verificationResult.status }}</p>
-  </div>
+<h2>Verify Document</h2>
+<form [formGroup]="verifyForm">
+  <label>Verification Code:</label>
+  <input formControlName="verificationCode" />
+  <button (click)="verify()">Verify</button>
+</form>
+<p>{{ verificationMessage }}</p>

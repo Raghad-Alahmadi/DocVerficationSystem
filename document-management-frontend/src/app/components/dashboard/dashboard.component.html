@@ -1,4 +1,17 @@
-<div *ngFor="let document of documents">
-    <h3>{{ document.title }}</h3>
-    <p>Status: {{ document.status }}</p>
-  </div>
+<h2>Uploaded Documents</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doc of documents">
+      <td>{{ doc.title }}</td>
+      <td>{{ doc.status }}</td>
+      <td><button (click)="verify(doc.id)">Verify</button></td>
+    </tr>
+  </tbody>
+</table>

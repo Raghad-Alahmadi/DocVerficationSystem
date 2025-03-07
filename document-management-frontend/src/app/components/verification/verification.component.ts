@@ -1,26 +1,30 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { DocumentService } from '../../services/document.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-verification',
   templateUrl: './verification.component.html',
-  styleUrls: ['./verification.component.css']
+  styleUrls: ['./verification.component.scss'],
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule]
 })
 export class VerificationComponent {
   verifyForm: FormGroup;
-  verificationResult: any;
+  verificationMessage: string = '';
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private documentService: DocumentService) {
     this.verifyForm = this.fb.group({
       verificationCode: ['', Validators.required]
     });
   }
 
-  onSubmit() {
+  verify() {
     if (this.verifyForm.valid) {
-      this.http.post('/api/verify', this.verifyForm.value).subscribe(response => {
-        this.verificationResult = response;
+      this.documentService.verifyDocument(this.verifyForm.value).subscribe(response => {
+        this.verificationMessage = response.message;
       });
     }
   }
