@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DocumentUploadComponent } from './components/document-upload/document-upload.component';
+import { VerificationComponent } from './components/verification/verification.component';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +12,18 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
   styleUrls: ['./app.component.css'],
   standalone: true,
   imports: [
-    RouterModule,
     CommonModule,
-    HttpClientModule // Add HttpClientModule here
+    HttpClientModule,
+    ReactiveFormsModule,
+    DashboardComponent,
+    DocumentUploadComponent,
+    VerificationComponent
   ]
 })
-export class AppComponent { }
+export class AppComponent {
+  currentComponent: string = 'dashboard';
+
+  showComponent(component: string) {
+    this.currentComponent = component;
+  }
+}

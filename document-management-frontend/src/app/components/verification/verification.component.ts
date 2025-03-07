@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DocumentService } from '../../services/document.service';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-verification',
@@ -12,23 +12,26 @@ import { DocumentService } from '../../services/document.service';
   imports: [
     CommonModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   providers: [DocumentService]
 })
 export class VerificationComponent {
   verifyForm: FormGroup;
-  verificationMessage: string = ''; 
+  verificationMessage: string = '';
 
-  constructor(private documentService: DocumentService, private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private documentService: DocumentService) {
     this.verifyForm = this.fb.group({
       verificationCode: ['']
     });
   }
 
-  verify() {
+  verify(): void {
     const code = this.verifyForm.get('verificationCode')?.value;
-    // Add your verification logic here
-    this.verificationMessage = `Verification code ${code} submitted.`;
+    this.documentService.verifyDocument(code).subscribe(response => {
+      this.verificationMessage = `Document verified successfully: ${response.title}`;
+    }, error => {
+      this.verificationMessage = 'Verification failed';
+    });
   }
 }

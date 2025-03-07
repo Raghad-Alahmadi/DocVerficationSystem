@@ -6,19 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DocumentService {
-  private apiUrl = 'http://localhost:5072/api/documents';
+  private apiUrl = 'http://localhost:5072/api/document'; 
 
   constructor(private http: HttpClient) {}
 
   getDocuments(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+    return this.http.get<any[]>(`${this.apiUrl}`);
   }
 
   uploadDocument(formData: FormData): Observable<any> {
-    return this.http.post(this.apiUrl, formData);
+    return this.http.post<any>(`${this.apiUrl}`, formData);
   }
 
-  verifyDocument(data: any): Observable<any> {
-    return this.http.post('http://localhost:5072/api/verify', data);
+  verifyDocument(verificationCode: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/verify`, { verificationCode });
   }
 }

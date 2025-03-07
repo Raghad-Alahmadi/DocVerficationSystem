@@ -1,7 +1,6 @@
-<h2>Verify Document</h2>
 <form [formGroup]="verifyForm">
   <label>Verification Code:</label>
   <input formControlName="verificationCode" />
-  <button (click)="verify()">Verify</button>
+  <button type="button" (click)="verify()">Verify</button>
 </form>
 <p>{{ verificationMessage }}</p>
