@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\controllers\\verificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:controllers\\verificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +39,6 @@
       "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|c:\\users\\ahuevo nice\\desktop\\docverficationsystem\\documentverificationbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5AB4A9B5-D198-4B62-9C55-572C2194E38D}|DocumentVerificationBackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -58,33 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VerificationLog.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\VerificationLog.cs",
-              "RelativeDocumentMoniker": "Models\\VerificationLog.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\VerificationLog.cs",
-              "RelativeToolTip": "Models\\VerificationLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:34:59.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:34:39.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Document.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\Document.cs",
               "RelativeDocumentMoniker": "Models\\Document.cs",
@@ -92,38 +66,87 @@
               "RelativeToolTip": "Models\\Document.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:33:58.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:33:58.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DocumentController.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Controllers\\DocumentController.cs",
               "RelativeDocumentMoniker": "Controllers\\DocumentController.cs",
               "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Controllers\\DocumentController.cs",
               "RelativeToolTip": "Controllers\\DocumentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:49:00.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "VerificationController.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Controllers\\VerificationController.cs",
               "RelativeDocumentMoniker": "Controllers\\VerificationController.cs",
               "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Controllers\\VerificationController.cs",
               "RelativeToolTip": "Controllers\\VerificationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T12:49:59.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Services\\DocumentService.cs",
+              "RelativeDocumentMoniker": "Services\\DocumentService.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Services\\DocumentService.cs",
+              "RelativeToolTip": "Services\\DocumentService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:38:55.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:36:14.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:34:39.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerificationLog.cs",
+              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\VerificationLog.cs",
+              "RelativeDocumentMoniker": "Models\\VerificationLog.cs",
+              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Models\\VerificationLog.cs",
+              "RelativeToolTip": "Models\\VerificationLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:34:59.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -131,12 +154,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:35:53.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:35:53.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Data\\DataSeeder.cs",
               "RelativeDocumentMoniker": "Data\\DataSeeder.cs",
@@ -144,34 +166,7 @@
               "RelativeToolTip": "Data\\DataSeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:57:29.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DocumentService.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Services\\DocumentService.cs",
-              "RelativeDocumentMoniker": "Services\\DocumentService.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Services\\DocumentService.cs",
-              "RelativeToolTip": "Services\\DocumentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:38:55.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ahuevo nice\\Desktop\\DocVerficationSystem\\DocumentVerificationBackend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:36:14.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:57:29.188Z"
             },
             {
               "$type": "Document",
@@ -183,8 +178,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-07T12:41:21.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T12:41:21.493Z"
             },
             {
               "$type": "Document",
