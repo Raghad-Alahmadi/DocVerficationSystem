@@ -1,31 +1,34 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DocumentService } from '../../services/document.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { DocumentService } from '../../services/document.service';
 
 @Component({
   selector: 'app-verification',
   templateUrl: './verification.component.html',
-  styleUrls: ['./verification.component.scss'],
+  styleUrls: ['./verification.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule]
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule 
+  ],
+  providers: [DocumentService]
 })
 export class VerificationComponent {
   verifyForm: FormGroup;
-  verificationMessage: string = '';
+  verificationMessage: string = ''; 
 
-  constructor(private fb: FormBuilder, private documentService: DocumentService) {
+  constructor(private documentService: DocumentService, private fb: FormBuilder) {
     this.verifyForm = this.fb.group({
-      verificationCode: ['', Validators.required]
+      verificationCode: ['']
     });
   }
 
   verify() {
-    if (this.verifyForm.valid) {
-      this.documentService.verifyDocument(this.verifyForm.value).subscribe(response => {
-        this.verificationMessage = response.message;
-      });
-    }
+    const code = this.verifyForm.get('verificationCode')?.value;
+    // Add your verification logic here
+    this.verificationMessage = `Verification code ${code} submitted.`;
   }
 }

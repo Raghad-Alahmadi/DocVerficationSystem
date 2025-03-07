@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     RouterModule,
     CommonModule,
+    HttpClientModule // Add HttpClientModule here
   ]
 })
 export class AppComponent { }
