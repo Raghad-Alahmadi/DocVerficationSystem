@@ -33,7 +33,7 @@ This project is a Document Verification System built with Angular for the fronte
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/DocVerficationSystem.git
+   git clone https://github.com/Raghad-Alahmadi/DocVerficationSystem.git
    cd DocVerficationSystem/DocumentVerificationBackend
    ```
 
