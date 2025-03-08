@@ -1,4 +1,4 @@
-# Document Verification System
+## Document Verification System
 
 This project is a Document Verification System built with Angular for the frontend and ASP.NET Core for the backend. The system allows users to upload documents, view document details, and verify documents.
 
