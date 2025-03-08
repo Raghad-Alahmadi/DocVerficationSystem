@@ -6,8 +6,8 @@ This project is a Document Verification System built with Angular for the fronte
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
+- [Backend Setup](#backend-setup)
+- [Frontend Setup](#frontend-setup)
 - [Running the Application](#running-the-application)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -32,7 +32,7 @@ This project is a Document Verification System built with Angular for the fronte
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/DocVerficationSystem.git
+   git clone https://github.com/Raghad-Alahmadi/DocVerficationSystem.git
    cd DocVerficationSystem/DocumentVerificationBackend
 
 2. Update the database connection string in appsettings.json:
