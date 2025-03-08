@@ -14,6 +14,10 @@ export class DocumentService {
     return this.http.get<any[]>(`${this.apiUrl}`);
   }
 
+  getDocument(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
+
   uploadDocument(formData: FormData): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}`, formData);
   }

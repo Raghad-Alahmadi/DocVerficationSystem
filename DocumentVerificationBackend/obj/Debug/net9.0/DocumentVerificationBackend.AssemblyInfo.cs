@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DocumentVerificationBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1164a8f17743f5ae59ab115e9c5754c3190a8362")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4d508bd8be4e3bc90616c7e36648f6e49262055")]
 [assembly: System.Reflection.AssemblyProductAttribute("DocumentVerificationBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DocumentVerificationBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

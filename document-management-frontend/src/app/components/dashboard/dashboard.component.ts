@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   documents: any[] = [];
+  selectedDocument: any = null;
   verificationMessage: string = '';
   verificationError: string = '';
 
@@ -29,5 +30,17 @@ export class DashboardComponent implements OnInit {
 
   navigateToVerification(verificationCode: string): void {
     this.router.navigate(['/verify'], { queryParams: { code: verificationCode } });
+  }
+
+  viewDocumentDetails(documentId: number): void {
+    this.documentService.getDocument(documentId).subscribe(data => {
+      this.selectedDocument = data;
+    }, error => {
+      this.verificationError = 'Error loading document details';
+    });
+  }
+
+  closeDocumentDetails(): void {
+    this.selectedDocument = null;
   }
 }

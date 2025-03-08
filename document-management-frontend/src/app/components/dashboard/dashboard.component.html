@@ -1,6 +1,6 @@
 <div class="dashboard">
   <h2>Documents</h2>
-  <table class="table">
+  <table class="table" *ngIf="!selectedDocument">
     <thead>
       <tr>
         <th>ID</th>
@@ -15,11 +15,20 @@
         <td>{{ document.title }}</td>
         <td>{{ document.status }}</td>
         <td>
+          <button (click)="viewDocumentDetails(document.id)" class="btn btn-info">View Details</button>
           <button *ngIf="document.status !== 'Verified'" (click)="navigateToVerification(document.verificationCode)" class="btn btn-primary">Verify</button>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <div *ngIf="selectedDocument">
+    <h2>{{ selectedDocument.title }}</h2>
+    <p><strong>Status:</strong> {{ selectedDocument.status }}</p>
+    <p><strong>Uploaded By:</strong> {{ selectedDocument.userId }}</p>
+    <p><strong>Created At:</strong> {{ selectedDocument.createdAt | date }}</p>
+    <button (click)="closeDocumentDetails()" class="btn btn-secondary">Close</button>
+  </div>
 
   <!-- Display the verification message -->
   <div *ngIf="verificationMessage" class="message success">
