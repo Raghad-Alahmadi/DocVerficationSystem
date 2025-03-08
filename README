@@ -1,4 +1,4 @@
-## Document Verification System
+# Document Verification System
 
 This project is a Document Verification System built with Angular for the frontend and ASP.NET Core for the backend. The system allows users to upload documents, view document details, and verify documents.
 
@@ -6,8 +6,8 @@ This project is a Document Verification System built with Angular for the fronte
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Backend Setup](#backend-setup)
-- [Frontend Setup](#frontend-setup)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
 - [Running the Application](#running-the-application)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -18,7 +18,6 @@ This project is a Document Verification System built with Angular for the fronte
 - Upload documents
 - View document details
 - Verify documents
-
 
 ## Prerequisites
 
@@ -33,9 +32,8 @@ This project is a Document Verification System built with Angular for the fronte
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Raghad-Alahmadi/DocVerficationSystem.git
+   git clone https://github.com/your-username/DocVerficationSystem.git
    cd DocVerficationSystem/DocumentVerificationBackend
-   ```
 
 2. Update the database connection string in appsettings.json:
    ```json
