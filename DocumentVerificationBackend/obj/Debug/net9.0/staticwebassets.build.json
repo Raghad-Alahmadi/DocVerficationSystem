@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "oqa8+HQiKRysTS9Ewv/oxLll9JoI7hJG+h6x3fPUtJw=",
+  "Source": "DocumentVerificationBackend",
+  "BasePath": "_content/DocumentVerificationBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

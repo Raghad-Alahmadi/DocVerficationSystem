@@ -1,0 +1,20 @@
+<form [formGroup]="verifyForm" class="verify-form">
+  <div class="form-group">
+    <label for="verificationCode">Verification Code:</label>
+    <input id="verificationCode" formControlName="verificationCode" class="form-control" />
+    <div *ngIf="isFieldInvalid('verificationCode')" class="error-message">
+      Verification Code is required.
+    </div>
+  </div>
+  <button type="button" (click)="verify()" class="btn btn-primary">Verify</button>
+</form>
+
+<!-- Display the success message -->
+<div *ngIf="successMessage" class="message success">
+  {{ successMessage }}
+</div>
+
+<!-- Display the error message -->
+<div *ngIf="errorMessage" class="message error">
+  {{ errorMessage }}
+</div>

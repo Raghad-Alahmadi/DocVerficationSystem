@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="logo">
+    <h1>Documents Verify Dashboard</h1> 
+  </div>
+  <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+    <i class="fas fa-file-alt"></i> 
+    <span>Documents</span>
+  </a>
+  <a class="nav-link" routerLink="/upload" routerLinkActive="active">
+    <i class="fas fa-upload"></i> 
+    <span>Upload Document</span>
+  </a>
+  <a class="nav-link" routerLink="/verify" routerLinkActive="active">
+    <i class="fas fa-check-circle"></i> 
+    <span>Verify Document</span>
+  </a>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

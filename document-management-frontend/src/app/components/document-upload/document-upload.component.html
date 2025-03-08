@@ -1,0 +1,32 @@
+<form [formGroup]="uploadForm" class="upload-form">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" formControlName="title" class="form-control" />
+    <div *ngIf="isFieldInvalid('title')" class="error-message">
+      Title is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="file">File:</label>
+    <input id="file" type="file" (change)="onFileSelected($event)" class="form-control" #fileInput />
+    <div *ngIf="isFieldInvalid('file')" class="error-message">
+      File is required.
+    </div>
+  </div>
+  <button type="button" (click)="upload()" class="btn btn-primary">Upload</button>
+</form>
+
+<!-- Display the success message -->
+<div *ngIf="successMessage" class="message success">
+  {{ successMessage }}
+</div>
+
+<!-- Display the error message -->
+<div *ngIf="errorMessage" class="message error">
+  {{ errorMessage }}
+</div>
+
+<!-- Display the verification code -->
+<div *ngIf="verificationCode" class="message info">
+  Your verification code is: {{ verificationCode }}
+</div>
