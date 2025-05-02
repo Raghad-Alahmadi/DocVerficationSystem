@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DocumentService {
-  private apiUrl = 'http://localhost:5072/api/document';
+  private apiUrl = 'https://verficationsystem.azurewebsites.net/api/document';
 
   constructor(private http: HttpClient) {}
 
